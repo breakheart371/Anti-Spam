@@ -32,7 +32,7 @@ After installing the dependencies, lets install the bot:
  ./C
 ```
 Developer:
-[Amir Bagheri](https://github.com/breakheart371)
+[Babak Khan](https://github.com/breakheart371)
 
 Company Channels:
 --------------------
