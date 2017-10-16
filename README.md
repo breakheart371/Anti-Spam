@@ -1,4 +1,4 @@
-# **CerNerCompany** #
+# **BlackTD** #
 
 [![Library](https://img.shields.io/badge/TDLib-beta-brightgreen.svg)](https://core.telegram.org/tdlib)
 [![Telegram-bot](https://img.shields.io/badge/TDCli-Bitbucket-green.svg)](https://valtman.name/telegram-bot)
@@ -28,17 +28,20 @@ After installing the dependencies, lets install the bot:
  cd Anti-*
  chmod +x C
  ./C install
- ./c login # Will ask you for a phone number & confirmation code.
- ./C
+ ./C config
+ ./C login-Cli # Will ask you for a phone number & confirmation code.
+ ./C login-Api
+ ./C Change-Login #Changed Login
+ ./C start
 ```
 Developer:
-[Babak Khan](https://github.com/breakheart371)
+[Babak Khan](https://github.com/babakkhan375)
 
-Company Channels:
+Black&White Channels:
 --------------------
-[CerNer Company](https://github.com/breakheart371)
+[Black&White](https://github.com/blackandwhiteTM)
 
 -------------------
-More information [CerNer Company](https://t.me/blackandwhiteTM)
+More information [Black&White](https://t.me/blackandwhiteTM)
 
 
