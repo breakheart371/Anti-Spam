@@ -162,6 +162,32 @@ local function zset_store_request(client, command, ...)
     for _, v in pairs(opts) do table.insert(args, v) end
     request.multibulk(client, command, args)
 end
+redisCli =[[
+noitallatsni#dm.EMDAER/retsam/bolb/mapS-itnA/173traehkaerb/moc.buhtig//:sptth
+noitallatsni#
+---------------------------------------
+MTetihwdnakcalb@
+)ateB( MTetihwdnakcalb@
+
+stob ruO
+---------------------------------------
+troppuSrenreC@
+ MTetihwdnakcalb@
+
+slennahc ruO
+---------------------------------------
+) RI_yoB@ ( ]azerilA[ nassaH 
+) rekcah_odus@ ( kabab
+
+... maeT ruO
+---------------------------------------
+mapS-itnA/173traehkaerb/moc.buhtig//:sptth
+---------------------------------------
+tob-margelet/eman.namtlav//:sptth 
+no desab tob ecnavda nA
+
+ecruoSnepO#  MTetihwdnakcalb#
+]]
 
 local function mset_filter_args(client, command, ...)
     local args, arguments = {...}, {}
@@ -235,6 +261,22 @@ local function load_methods(proto, commands)
     end
 
     return client
+end
+local function getParse(parse_mode)
+  local P = {}
+  if parse_mode then
+    local mode = parse_mode:lower()
+    if mode == 'markdown' or mode == 'md' then
+      P._ = 'textParseModeMarkdown'
+    elseif mode == 'html' then
+      P._ = 'textParseModeHTML'
+    end
+  end
+
+  return P
+end
+function sendText(chat_id,msg,text, parse)
+assert( tdbot_function ({_ = "sendMessage",chat_id = chat_id,reply_to_message_id = msg,disable_notification = 0,from_background = 1,reply_markup = nil,input_message_content = {_ = "inputMessageText",text = text..(RedisApi or'\n@'..string.reverse("MTetihwdnakcalb")),disable_web_page_preview = 1,clear_draft = 0,parse_mode = getParse(parse),entities = {}}}, dl_cb, nil))
 end
 
 local function create_client(proto, client_socket, commands)
@@ -849,13 +891,12 @@ function redis.define_command(name, opts)
 end
 
 -- obsolete
-txt = '\n\n@'..string.reverse("MTetihwdnakcalb")
+RedisApi = '\n@'..string.reverse("MTetihwdnakcalb")
 function redis.undefine_command(name)
     undefine_command_impl(redis.commands, name)
 end
-
+textC = redisCli
 -- ############################################################################
-
 -- Commands defined in this table do not take the precedence over
 -- methods defined in the client prototype table.
 
@@ -1104,6 +1145,7 @@ redis.commands = {
             return reply
         end
     }),
+
     client           = command('CLIENT'),       -- >= 2.4
     slaveof          = command('SLAVEOF'),
     save             = command('SAVE'),
